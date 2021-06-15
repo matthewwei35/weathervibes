@@ -14,17 +14,17 @@ function MoodInput() {
         <RadioButton
           label="happy"
           name="mood"
-          onChange={() => setMessage('Yay, that is wonderful!')}
+          onChange={() => setMessage('Yay, that is wonderful! 😊')}
         />
         <RadioButton
           label="calm"
           name="mood"
-          onChange={() => setMessage('The weather is calm too.')}
+          onChange={() => setMessage('The weather is calm too. 😌')}
         />
         <RadioButton
           label="sad"
           name="mood"
-          onChange={() => setMessage('I hope you feel better.')}
+          onChange={() => setMessage('I hope you feel better. 🥺')}
         />
       </form>
     </div>
