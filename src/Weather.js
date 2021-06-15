@@ -7,18 +7,34 @@ function Weather() {
   const [zip, setZip] = useState('');
   const [unit, setUnit] = useState('');
   const [data, setData] = useState(null);
+  const token = process.env.REACT_APP_OWP_TOKEN;
 
-  async function fetchWeather() {
-    const token = process.env.REACT_APP_OWP_TOKEN;
+  function fetchWeatherByGeo() {
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+    navigator.geolocation.getCurrentPosition(pos => {
+      const { latitude, longitude } = pos.coords
+      const path = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${token}&units=${unit}`;
+      fetchWeather(path);
+    }, err => {
+      console.log(err.message);
+    }, options);
+  }
+
+  function fetchWeatherByZip() {
     const path = `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${token}&units=${unit}`;
+    fetchWeather(path);
+  }
+
+  async function fetchWeather(path) {
     const res = await fetch(path);
     const json = await res.json();
 
-    // console.log(json);
-
     const cod = json.cod;
     const message = json.message;
-
     if (cod !== 200) {
       setData({ cod, message })
       return
@@ -27,6 +43,9 @@ function Weather() {
     const temp = json.main.temp;
     const name = json.name;
     const feelsLike = json.main.feels_like;
+    const humidity = json.main.humidity;
+    const pressure = json.main.pressure;
+    const wind = json.wind.speed;
     const description = json.weather[0].description;
 
     setData({
@@ -35,6 +54,9 @@ function Weather() {
       temp,
       name,
       feelsLike,
+      humidity,
+      pressure,
+      wind,
       description,
     })
   }
@@ -44,7 +66,7 @@ function Weather() {
       {data && <WeatherDisplay {...data} />}
       <form onSubmit={e => {
         e.preventDefault();
-        fetchWeather();
+        fetchWeatherByZip();
       }}>
         <div>
           <input
@@ -83,6 +105,9 @@ function Weather() {
           onChange={() => setUnit('standard')}
         />
       </form>
+      <button
+        onClick={() => fetchWeatherByGeo()}
+      >Get weather by location</button>
     </div>
   );
 }
