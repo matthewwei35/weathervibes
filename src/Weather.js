@@ -1,4 +1,4 @@
-import './Weather.css';
+import './Weather.scss';
 import { useState } from 'react';
 import RadioButton from './RadioButton';
 import WeatherDisplay from './WeatherDisplay';

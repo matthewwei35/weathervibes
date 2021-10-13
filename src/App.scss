@@ -1,7 +1,9 @@
+$color-blue: #ADD8E6;
+
 .App {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ADD8E6;
+  background-color: $color-blue;
 }
