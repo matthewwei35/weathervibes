@@ -81,7 +81,7 @@ function Weather() {
           value={unit}
           onChange={e => setUnit(e.target.value)}
         >
-          <option value="metric">Calcius</option>
+          <option value="metric">Celsius</option>
           <option value="imperial">Fahrenheit</option>
           <option value="standard">Kelvin</option>
         </select>
