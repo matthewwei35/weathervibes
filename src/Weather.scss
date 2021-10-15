@@ -1,9 +1,11 @@
 $base-font-size: 1rem;
 $border-size: 1px;
 $zero: 0;
-$border-color: #000;
+$color-border: #000;
+$color-button: #1274FF;
+$color-dark-primary: #1164D1;
 $color-dark: #333;
-$color-light: #EEE;
+$color-light: #FFF;
 
 .Weather {
   padding-right: 2rem;
@@ -16,18 +18,39 @@ $color-light: #EEE;
     border-radius: ($base-font-size * 0.5) $zero $zero ($base-font-size * 0.5);
   }
   
-  form button {
-    padding: $base-font-size;
-    margin: $zero;
-    font-size: $base-font-size;
-    border: $border-size solid;
-    border-color: $border-color;
-    border-radius: $zero ($base-font-size * 0.5) ($base-font-size * 0.5) $zero;
-    background-color: $color-dark;
-    color: $color-light;
-  }
+  form {
+    button {
+      padding: $base-font-size;
+      margin: $zero;
+      font-size: $base-font-size;
+      border: $border-size solid;
+      border-color: $color-border;
+      border-radius: $zero ($base-font-size * 0.5) ($base-font-size * 0.5) $zero;
+      background-color: $color-button;
+      color: $color-light;
+    }
+
+    select {
+      margin: $base-font-size $zero;
+    }
   
-  form select {
-    margin: $base-font-size $zero;
+    label {
+      padding-left: ($base-font-size * 0.5);
+    }
+  }
+
+
+  button {
+    padding: 1rem;
+    border: $border-size solid;
+    border-color: $color-border;
+    border-radius: ($base-font-size * 0.5);
+    background-color: $color-button;
+    color: $color-light;
+
+    &:hover {
+      background-color: $color-dark-primary;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
   }
 }
