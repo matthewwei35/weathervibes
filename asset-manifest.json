@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/weathervibes/static/css/main.794b5a1b.chunk.css",
+    "main.js": "/weathervibes/static/js/main.95e0503e.chunk.js",
+    "main.js.map": "/weathervibes/static/js/main.95e0503e.chunk.js.map",
+    "runtime-main.js": "/weathervibes/static/js/runtime-main.40d8fa7a.js",
+    "runtime-main.js.map": "/weathervibes/static/js/runtime-main.40d8fa7a.js.map",
+    "static/js/2.c954aa77.chunk.js": "/weathervibes/static/js/2.c954aa77.chunk.js",
+    "static/js/2.c954aa77.chunk.js.map": "/weathervibes/static/js/2.c954aa77.chunk.js.map",
+    "static/js/3.b5d64d50.chunk.js": "/weathervibes/static/js/3.b5d64d50.chunk.js",
+    "static/js/3.b5d64d50.chunk.js.map": "/weathervibes/static/js/3.b5d64d50.chunk.js.map",
+    "index.html": "/weathervibes/index.html",
+    "static/css/main.794b5a1b.chunk.css.map": "/weathervibes/static/css/main.794b5a1b.chunk.css.map",
+    "static/js/2.c954aa77.chunk.js.LICENSE.txt": "/weathervibes/static/js/2.c954aa77.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40d8fa7a.js",
+    "static/js/2.c954aa77.chunk.js",
+    "static/css/main.794b5a1b.chunk.css",
+    "static/js/main.95e0503e.chunk.js"
+  ]
+}
