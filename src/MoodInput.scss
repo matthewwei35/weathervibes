@@ -1,0 +1,7 @@
+$base-font-size: 1rem;
+
+.MoodInput {
+  label:not(:nth-child(1)) {
+    padding-left: ($base-font-size * 0.5);
+  }
+}

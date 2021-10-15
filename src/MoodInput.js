@@ -1,3 +1,4 @@
+import './MoodInput.scss';
 import { useState } from 'react';
 import RadioButton from './RadioButton';
 
