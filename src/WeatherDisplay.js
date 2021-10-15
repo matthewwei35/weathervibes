@@ -9,9 +9,9 @@ function WeatherDisplay(props) {
 
   return (
     <div className="WeatherDisplay">
-      <h1>{temp}</h1>
+      <h1>{temp}&#176;</h1>
       <h2>{name}</h2>
-      <small>Feels like: {feelsLike} | Humidity: {humidity} | Pressure: {pressure} |<br/> Wind: {wind}</small>
+      <small>Feels Like: <b>{feelsLike}&#176;</b> | Humidity: <b>{humidity}%</b> | Pressure: <b>{pressure} inHg</b> |<br/> Wind: <b>{wind} mph</b></small>
       <p>{description}</p>
     </div>
   );
