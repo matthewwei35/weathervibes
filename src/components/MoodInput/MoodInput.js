@@ -1,6 +1,6 @@
 import './MoodInput.scss';
 import { useState } from 'react';
-import RadioButton from './RadioButton';
+import RadioButton from '../RadioButton/RadioButton';
 
 function MoodInput() {
   const [message, setMessage] = useState('');

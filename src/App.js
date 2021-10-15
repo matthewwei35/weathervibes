@@ -1,6 +1,6 @@
 import './App.scss';
-import Weather from './Weather';
-import MoodInput from './MoodInput';
+import Weather from './components/Weather/Weather';
+import MoodInput from './components/MoodInput/MoodInput';
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import './Weather.scss';
 import { useState } from 'react';
-import RadioButton from './RadioButton';
-import WeatherDisplay from './WeatherDisplay';
+import RadioButton from '../RadioButton/RadioButton';
+import WeatherDisplay from '../WeatherDisplay/WeatherDisplay';
 
 function Weather() {
   const [zip, setZip] = useState('');
